@@ -8,7 +8,7 @@
   z-index: 1;
   flex: 100%;
 
-  @media (--viewport-large) {
+  @media (min-width: 1024px) {
     align-self: flex-start;
     margin-bottom: -2rem;
   }
@@ -21,8 +21,8 @@
   padding-right: 50%;
   height: auto;
 
-  @media (--viewport-large) {
+  @media (min-width: 1024px) {
     flex: 33.333%;
-    padding-right: inherit; 
+    padding-right: inherit;
   }
 }

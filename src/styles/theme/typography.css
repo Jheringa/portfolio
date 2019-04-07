@@ -1,26 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin:400,700|Open+Sans:400,700');
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,700|Open+Sans:400,700");
 
 :root {
-  --base-font-family: 'Open Sans', sans-serif;
-  --heading-font-family: 'Cabin', sans-serif;
+  --base-font-family: "Open Sans", sans-serif;
+  --heading-font-family: "Cabin", sans-serif;
 }
 
 body {
   --font-size: 16px;
   --line-height: 1.5;
-  
+
   font-size: var(--font-size);
   font-family: var(--base-font-family);
   line-height: var(--line-height);
   color: var(--brand-white);
 
-  @media (--viewport-large) {
+  @media (min-width: 1024px) {
     --font-size: 18px;
   }
 }
 
-.h1, .h2, .h3, .h4,
-h1, h2, h3, h4 {
+.h1,
+.h2,
+.h3,
+.h4,
+h1,
+h2,
+h3,
+h4 {
   --line-height: 1.3;
 
   font-family: var(--heading-font-family);
@@ -57,7 +63,6 @@ a {
   color: var(--brand-white);
 }
 
-
 .highlighted {
   color: var(--brand-primary);
 }
@@ -67,7 +72,7 @@ a {
   font-size: var(--font-size);
   font-weight: bold;
 
-  @media (--viewport-large) {
+  @media (min-width: 1024px) {
     --font-size: 2.25rem;
   }
 }
@@ -79,19 +84,18 @@ a {
   z-index: -1;
   transition: padding-left 150ms ease-in-out;
 
-  @media (--viewport-large) {
+  @media (min-width: 1024px) {
     --font-size: 160px;
     padding-left: 8rem;
   }
 
   @media (min-width: 1420px) {
     padding-left: 0;
-    
   }
 
   &:before {
-    @media (--viewport-large) {
-      content: '0' attr(data-count) ' ';
+    @media (min-width: 1024px) {
+      content: "0" attr(data-count) " ";
       position: absolute;
       left: 50%;
       width: 100vw;
@@ -132,4 +136,3 @@ a.nav-link {
 span.nav-link {
   -webkit-text-fill-color: transparent;
 }
-

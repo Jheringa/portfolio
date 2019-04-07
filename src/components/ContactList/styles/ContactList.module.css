@@ -3,12 +3,12 @@
   margin: 0;
   padding: 0;
 
-  @media (--viewport-large) {
+  @media (min-width: 1024px) {
     order: 1;
   }
 
   & li {
-    @media (--viewport-large) {
+    @media (min-width: 1024px) {
       font-weight: 700;
     }
   }

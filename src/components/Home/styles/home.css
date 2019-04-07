@@ -1,8 +1,8 @@
 .home-intro {
-  @media (--viewport-large) {
+  @media (min-width: 1024px) {
     display: flex;
     flex-direction: column;
-    padding-left:1rem;
+    padding-left: 1rem;
     grid-column: 6 / span 5;
     flex: calc(58.335% - 5rem);
   }

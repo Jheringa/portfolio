@@ -9,12 +9,12 @@
   position: relative;
   text-decoration: none;
 
-  @media (--viewport-large) {
+  @media (min-width: 1024px) {
     display: flex;
   }
 
   & > div {
-    @media (--viewport-large) {
+    @media (min-width: 1024px) {
       flex: 50%;
       height: 100%;
     }
@@ -35,15 +35,19 @@
   z-index: -1;
 
   &:after {
-    content: '';
+    content: "";
     display: block;
     padding-top: 100%;
-    background: linear-gradient(to bottom, rgba(255,126,45,1) 0%, rgba(252,186,144,1) 100%);
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 126, 45, 1) 0%,
+      rgba(252, 186, 144, 1) 100%
+    );
     transform: translateX(-100%);
     transition: transform 500ms cubic-bezier(0.74, 0.15, 0.27, 1) 200ms;
   }
 
-  @media (--viewport-large) {
+  @media (min-width: 1024px) {
     right: inherit;
     left: 0;
     width: 50%;
@@ -59,9 +63,9 @@
   margin: 0 auto;
   top: 4rem;
 
-  @media (--viewport-large) {
+  @media (min-width: 1024px) {
     width: 100%;
-        top: calc(50% - 4rem);
+    top: calc(50% - 4rem);
   }
 }
 
@@ -72,7 +76,7 @@
 }
 
 .slide-visible .cases-background:after {
-  transform: translateX(0); 
+  transform: translateX(0);
 }
 
 .skill-set {
@@ -87,7 +91,7 @@
   position: absolute;
   /* top: 10px; */
 
-  @media (--viewport-large) {
+  @media (min-width: 1024px) {
     font-size: 200px;
     top: -400px;
   }
@@ -96,7 +100,7 @@
 .product-description {
   display: none;
 
-  @media (--viewport-large) {
+  @media (min-width: 1024px) {
     display: block;
   }
 }
