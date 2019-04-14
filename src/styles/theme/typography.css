@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin:400,700|Open+Sans:400,700");
 
+@font-face {
+  font-family: manrope;
+  src: url(../fonts/manrope-bold.woff),
+  url(../fonts/manrope-bold.woff2);
+}
+
 :root {
   --base-font-family: "Open Sans", sans-serif;
-  --heading-font-family: "Cabin", sans-serif;
+  --heading-font-family: "manrope", sans-serif;
 }
 
 body {
@@ -114,14 +120,16 @@ a {
   width: 120px;
 }
 
+
 .nav-link {
   position: absolute;
   display: block;
   font-size: 60px;
   font-family: var(--heading-font-family);
   text-decoration: none;
-  -webkit-text-stroke: 2px snow;
+  -webkit-text-stroke: 1px snow;
   -webkit-text-fill-color: #fff;
+  text-transform: uppercase;
 }
 
 a.nav-link {
