@@ -86,9 +86,13 @@ a {
 .xl-title {
   --font-size: 15vw;
   position: relative;
-  color: var(--brand-secondary);
+  /* color: var(--brand-secondary); */
   z-index: -1;
   transition: padding-left 150ms ease-in-out;
+      -webkit-text-stroke: 2px var(--brand-secondary);;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
 
   @media (min-width: 1024px) {
     --font-size: 160px;
@@ -118,6 +122,10 @@ a {
   position: relative;
   height: 90px;
   width: 120px;
+
+  &:hover a.nav-link {
+    height: 100%;
+  }
 }
 
 
@@ -137,14 +145,17 @@ a {
 }
 
 a.nav-link {
-  opacity: 0;
-  transition: opacity 500ms ease-in-out;
+  height: 0;
+  overflow: hidden;
 
-  &:hover {
-    opacity: 1;
-  }
+  transition: height 500ms cubic-bezier(.6,.01,.31,.87);
 }
 
 span.nav-link {
   -webkit-text-fill-color: transparent;
+}
+
+.skill-set {
+  display: block;
+  margin-bottom: 3rem;
 }

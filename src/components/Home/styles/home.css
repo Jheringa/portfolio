@@ -1,5 +1,5 @@
 .home-intro {
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     display: flex;
     flex-direction: column;
     padding-left: 1rem;

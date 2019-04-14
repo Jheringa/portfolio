@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import '../components/CaseSlider/styles/CaseSlider.css';
 
+
 const CasesPage = () => {
   const data = useStaticQuery(graphql`
     query CasePreview {
@@ -47,7 +48,7 @@ const CasesPage = () => {
 
       <ParallaxProvider>
         <div className="cases-wrapper">
-          <Link className="cases" to="food">
+          <Link className="cases" to="paard">
             <div className="cases-visual">
               <span className="h3 cases-title top">Paard</span>
               <span className="h3 cases-title bottom">Paard</span>

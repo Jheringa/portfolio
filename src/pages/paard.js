@@ -1,20 +1,23 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from "../components/layout"
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css'; // This
 import '../components/case/styles/case.css'
+
 
 const PaardPage = () => {
   const data = useStaticQuery(graphql`
     query paardCase {
       flowchart: file(relativePath: { eq: "flowchart-paard.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 1080) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      headervisual: file(relativePath: { eq: "paard-screens-detail.png" }) {
+      headervisual: file(relativePath: { eq: "paard-interface.png" }) {
         childImageSharp {
           fluid(maxWidth: 1080) {
             ...GatsbyImageSharpFluid
@@ -28,20 +31,61 @@ const PaardPage = () => {
           }
         }
       }
+      paard1: file(relativePath: { eq: "paard-1.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1080) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      paard2: file(relativePath: { eq: "paard-2.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1080) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      paard3: file(relativePath: { eq: "paard-3.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1080) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      paard4: file(relativePath: { eq: "paard-4.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1080) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
+
+  const images = [
+    data.paard1.childImageSharp.fluid.src,
+    data.paard2.childImageSharp.fluid.src,
+    data.paard3.childImageSharp.fluid.src,
+    data.paard4.childImageSharp.fluid.src,
+    data.styleguide.childImageSharp.fluid.src,
+    data.flowchart.childImageSharp.fluid.src,
+  ]
+
+  const [lightboxIsOpen, setLightboxIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
+
 
   return (
     <Layout>
       <header>
         <div className="header-visual">
           <div className="nav-link-conainer">
-            <span className="nav-link" to="cases">Back</span>
-            <Link className="nav-link" to="cases">Back</Link>
+            <span className="nav-link" to="/">Back</span>
+            <Link className="nav-link" to="/">Back</Link>
           </div>
           <Img fluid={data.headervisual.childImageSharp.fluid} />
         </div>
-        <h1 className="header-text">Fabrique | Paard</h1>
+        <h1 className="header-text">Paard</h1>
         <span className="skill-set">Sketch | Photoshop | Principle</span>
         <span className="subtitle">We got the assignment by Fabrique | Paard Den Haag. The question was: <span className="highlighted">'How can we get people to return to Paard Den Haag'.</span> We worked in a team of 4 people, our target group was the age 23 to 28.</span>
       </header>
@@ -112,12 +156,20 @@ const PaardPage = () => {
         <p>My task in this process was to design the one-pager and prototype. To do this It was necessary to create a good flow. To keep everything in the branding of Paard a style guide was also needed.</p>
         <div className="split-wrapper">
           <div className="split-wrapper__column">
-            <h3 className="h3__case">Style guide</h3>
-            <Img fluid={data.styleguide.childImageSharp.fluid} />
-          </div>
-          <div className="split-wrapper__column">
-            <h3 className="h3__case">Flowchart</h3>
-            <Img fluid={data.flowchart.childImageSharp.fluid} />
+            <h3 className="h3__case">Screens</h3>
+            <div onClick={() => setLightboxIsOpen(true)} className="thumpnails">
+              <Img fluid={data.paard1.childImageSharp.fluid} />
+              <Img fluid={data.paard2.childImageSharp.fluid} />
+              <Img fluid={data.paard3.childImageSharp.fluid} />
+            </div>
+            {lightboxIsOpen && <Lightbox
+              mainSrc={images[photoIndex]}
+              nextSrc={images[(photoIndex + 1) % images.length]}
+              prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+              onCloseRequest={() => setLightboxIsOpen(false)}
+              onMovePrevRequest={() => setPhotoIndex((photoIndex + images.length - 1) % images.length)}
+              onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % images.length)}
+            />}
           </div>
         </div>
       </section>

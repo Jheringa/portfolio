@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from "../components/layout"
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
 import '../components/case/styles/case.css'
 
 const PaardPage = () => {
@@ -9,7 +11,7 @@ const PaardPage = () => {
     query food {
       flowchart: file(relativePath: { eq: "flowchart-paard.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 1080) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -21,16 +23,87 @@ const PaardPage = () => {
           }
         }
       }
+      food1: file(relativePath: { eq: "food-1.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1080) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      food2: file(relativePath: { eq: "food-2.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1080) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      food3: file(relativePath: { eq: "food-3.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1080) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      food4: file(relativePath: { eq: "food-4.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1080) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      food5: file(relativePath: { eq: "food-5.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1080) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      food6: file(relativePath: { eq: "food-6.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1080) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      food7: file(relativePath: { eq: "food-7.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1080) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      food8: file(relativePath: { eq: "food-8.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1080) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
+
+  const images = [
+    data.food1.childImageSharp.fluid.src,
+    data.food2.childImageSharp.fluid.src,
+    data.food3.childImageSharp.fluid.src,
+    data.food4.childImageSharp.fluid.src,
+    data.food5.childImageSharp.fluid.src,
+    data.food6.childImageSharp.fluid.src,
+    data.food7.childImageSharp.fluid.src,
+    data.food8.childImageSharp.fluid.src,
+    data.flowchart.childImageSharp.fluid.src,
+  ]
+
+  const [lightboxIsOpen, setLightboxIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
 
   return (
     <Layout>
       <header>
         <div className="header-visual">
           <div className="nav-link-conainer">
-            <span className="nav-link" to="cases">Back</span>
-            <Link className="nav-link" to="cases">Back</Link>
+            <span className="nav-link" to="/">Back</span>
+            <Link className="nav-link" to="/">Back</Link>
           </div>
           <Img fluid={data.headervisual.childImageSharp.fluid} />
         </div>
@@ -57,15 +130,28 @@ const PaardPage = () => {
         <p>In the design process, I straight away started thinking about how I wanted to animate the pages. Before prototyping, I  tested the design with my classmates and friend if they missed certain functions.</p>
         <div className="split-wrapper">
           <div className="split-wrapper__column">
-            <h3 className="h3__case">Flowchart</h3>
-            <Img fluid={data.flowchart.childImageSharp.fluid} />
+            <h3 className="h3__case">Screens</h3>
+
+            <div onClick={() => setLightboxIsOpen(true)} className="thumpnails">
+              <Img fluid={data.food1.childImageSharp.fluid} />
+              <Img fluid={data.food2.childImageSharp.fluid} />
+              <Img fluid={data.food6.childImageSharp.fluid} />
+            </div>
+            {lightboxIsOpen && <Lightbox
+              mainSrc={images[photoIndex]}
+              nextSrc={images[(photoIndex + 1) % images.length]}
+              prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+              onCloseRequest={() => setLightboxIsOpen(false)}
+              onMovePrevRequest={() => setPhotoIndex((photoIndex + images.length - 1) % images.length)}
+              onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % images.length)}
+            />}
           </div>
         </div>
       </section>
       <section className="case-section">
         <h2 className="xl-title with-overlapping-text" data-count="4">Prototype</h2>
         <p>For this case I used Flinto. This was also a new prototype program. Luckily there were tons of tutorials online. The good thing about Flinto was the micro animations and the ability to copy the transitions instead of making the same animation over and over again.</p>
-        <div class='embed-container'><iframe src='https://www.youtube.com/embed/M2lPz-DiYCQ' frameborder='0' allowfullscreen></iframe></div>
+        <div className='embed-container'><iframe src='https://www.youtube.com/embed/M2lPz-DiYCQ' frameborder='0' allowfullscreen></iframe></div>
       </section>
     </Layout>
   )
