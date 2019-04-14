@@ -11,21 +11,21 @@ const CasesPage = () => {
     query CasePreview {
       casePaard: file(relativePath: { eq: "paard-interface.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 1080) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       caseFood: file(relativePath: { eq: "food.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 1080) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       woonstadCase: file(relativePath: { eq: "werkstad-logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 1080) {
             ...GatsbyImageSharpFluid
           }
         }
