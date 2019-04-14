@@ -3,12 +3,12 @@
   margin: 0;
   padding: 0;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     order: 1;
   }
 
   & li {
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
       font-weight: 700;
     }
   }
