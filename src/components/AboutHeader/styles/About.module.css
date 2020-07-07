@@ -29,14 +29,15 @@
 
   & > div {
     overflow: hidden;
-    animation: animate-image 1500ms cubic-bezier(.6,.01,.31,.87) forwards;
+    animation: animate-image 1500ms cubic-bezier(0.6, 0.01, 0.31, 0.87) forwards;
   }
 }
 
 @keyframes animate-image {
   from {
     height: 0;
-  } to {
+  }
+  to {
     height: 100%;
   }
 }

@@ -1,10 +1,9 @@
 import React from "react"
-import { useStaticQuery, Link } from 'gatsby';
+import { useStaticQuery, Link } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
-import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
-import '../components/CaseSlider/styles/CaseSlider.css';
-
+import { ParallaxProvider, Parallax } from "react-scroll-parallax"
+import "../components/CaseSlider/styles/CaseSlider.css"
 
 const CasesPage = () => {
   const data = useStaticQuery(graphql`
@@ -23,7 +22,14 @@ const CasesPage = () => {
           }
         }
       }
-      woonstadCase: file(relativePath: { eq: "werkstad-logo.png" }) {
+      caseAd: file(relativePath: { eq: "AD_case_index.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1080) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      caseElderly: file(relativePath: { eq: "elderly_header.png" }) {
         childImageSharp {
           fluid(maxWidth: 1080) {
             ...GatsbyImageSharpFluid
@@ -37,25 +43,44 @@ const CasesPage = () => {
     <Layout>
       <header className="cases-header">
         <div className="nav-link-conainer">
-          <span className="h1 nav-link active" to="/">Cases</span>
-          <Link className="h1 nav-link" to="/">Cases</Link>
+          <span className="h1 nav-link active" to="/">
+            Cases
+          </span>
+          <Link className="h1 nav-link" to="/">
+            Cases
+          </Link>
         </div>
         <div className="nav-link-conainer">
-          <span className="h1 nav-link" to="about">About</span>
-          <Link className="h1 nav-link" to="about">About</Link>
+          <span className="h1 nav-link" to="about">
+            About
+          </span>
+          <Link className="h1 nav-link" to="about">
+            About
+          </Link>
+        </div>
+        <div className="nav-link-conainer">
+          <span className="h1 nav-link" to="sandbox">
+            Sandbox
+          </span>
+          <Link className="h1 nav-link" to="sandbox">
+            Sandbox
+          </Link>
         </div>
       </header>
 
       <ParallaxProvider>
         <div className="cases-wrapper">
-          <Link className="cases" to="paard">
+          <Link className="cases" to="elderly-case">
             <div className="cases-visual">
-              <span className="h3 cases-title top">Paard</span>
-              <span className="h3 cases-title bottom">Paard</span>
+              <span className="h3 cases-title top">Elderly</span>
+              <span className="h3 cases-title bottom">Elderly</span>
               <Parallax y={[-10, 10]} tagOuter="figure">
-                <Img className="cases-image" fluid={data.casePaard.childImageSharp.fluid} />
+                <Img
+                  className="cases-image"
+                  fluid={data.caseElderly.childImageSharp.fluid}
+                />
               </Parallax>
-              <h3 className="cases-title">Paard</h3>
+              <h3 className="cases-title">Elderly</h3>
             </div>
           </Link>
 
@@ -64,9 +89,39 @@ const CasesPage = () => {
               <span className="h3 cases-title top">Food</span>
               <span className="h3 cases-title bottom">Food</span>
               <Parallax y={[-10, 10]} tagOuter="figure">
-                <Img className="cases-image" fluid={data.caseFood.childImageSharp.fluid} />
+                <Img
+                  className="cases-image"
+                  fluid={data.caseFood.childImageSharp.fluid}
+                />
               </Parallax>
               <h3 className="cases-title">Food</h3>
+            </div>
+          </Link>
+
+          <Link className="cases" to="ad-case">
+            <div className="cases-visual">
+              <span className="h3 cases-title top">ARnews</span>
+              <span className="h3 cases-title bottom">ARnews</span>
+              <Parallax y={[-10, 10]} tagOuter="figure">
+                <Img
+                  className="cases-image"
+                  fluid={data.caseAd.childImageSharp.fluid}
+                />
+              </Parallax>
+              <h3 className="cases-title">ARnews</h3>
+            </div>
+          </Link>
+          <Link className="cases" to="paard">
+            <div className="cases-visual">
+              <span className="h3 cases-title top">Paard</span>
+              <span className="h3 cases-title bottom">Paard</span>
+              <Parallax y={[-10, 10]} tagOuter="figure">
+                <Img
+                  className="cases-image"
+                  fluid={data.casePaard.childImageSharp.fluid}
+                />
+              </Parallax>
+              <h3 className="cases-title">Paard</h3>
             </div>
           </Link>
         </div>

@@ -37,15 +37,22 @@ const IndexPage = () => {
             <span className="highlighted">UX/UI design</span>
           </h2>
           <p>
-            Alright! so I’m 25-year old based in Rotterdam. In 2016 I graduated
-            in Interactive design (English) at Grafisch Lyceum Rotterdam. The
-            study focused on branding and web coding using HTML/CSS and the
-            basics of javascript and PHP. Currently, I’m studying at Hogeschool
-            Rotterdam (CMD), Where I’m focussing on UX/UI and concept.
+            Alright! So I’m a 25-year old based in Rotterdam. I'm a
+            Communication multimedia design student With a great passion for
+            experimenting and working on physical products and installations.
+            With my coding background (graduated in Interactive design at
+            Grafisch Lyceum Rotterdam, 2016), I like to challenge myself to
+            tryout techniques such as AR/VR. In september I'm starting the minor
+            Smart material for behaviour change. For my graduation project I
+            would like to discover more new technology and use them in projects.
+            Topics that I would like to work with sound and light combining with
+            topics like future living, sustainability, food or music. With the
+            goal to inspire, entertain, and educate the user.
           </p>
           <p>
-            In my spare time, I like to practise music, playing the guitar and
-            piano. Or might be found on the beach catching waves (:
+            In In my spare time I try to do small experiments with musical
+            instruments or food dishes. Or I might be found on the beach
+            catching waves (:
           </p>
         </div>
       </header>
