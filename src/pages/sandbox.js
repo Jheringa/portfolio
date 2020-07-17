@@ -56,7 +56,28 @@ const sandbox = () => {
           </Link>
         </div>
       </header>
-
+      <div className={styles.sandboxItem}>
+        <div className={styles.sandboxImage}>
+          <iframe
+            src="https://www.youtube.com/embed/5OqAq1yCOA4"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </div>
+        <div className={styles.sandboxText}>
+          <h4>Parallax scoll</h4>
+          <p>
+            <b>Type:</b> UI Animation
+          </p>
+          <p>
+            <b>Tools:</b> Figma | Principle
+          </p>
+          <p>
+            <b>Datum:</b> 2020
+          </p>
+        </div>
+      </div>
       <div className={styles.sandboxItem}>
         <div className={styles.sandboxImage}>
           <iframe
@@ -67,10 +88,16 @@ const sandbox = () => {
           />
         </div>
         <div className={styles.sandboxText}>
-          <h4>Name: Surf shop animation</h4>
-          <p>Type: UI Animation</p>
-          <p>Tools: Sketch | Flinto</p>
-          <p>Datum: 2019</p>
+          <h4>Surf shop animation</h4>
+          <p>
+            <b>Type:</b> UI Animation
+          </p>
+          <p>
+            <b>Tools:</b> Sketch | Flinto
+          </p>
+          <p>
+            <b>Datum:</b> 2019
+          </p>
         </div>
       </div>
       <div className={styles.sandboxItem}>
@@ -83,10 +110,16 @@ const sandbox = () => {
           />
         </div>
         <div className={styles.sandboxText}>
-          <h4>Name: Button animation</h4>
-          <p>Type: UI Animation</p>
-          <p>Tools: Sketch | Principle</p>
-          <p>Datum: 2019</p>
+          <h4>Button animation</h4>
+          <p>
+            <b>Type:</b> UI Animation
+          </p>
+          <p>
+            <b>Tools:</b> Sketch | Principle
+          </p>
+          <p>
+            <b>Datum:</b> 2019
+          </p>
         </div>
       </div>
     </Layout>

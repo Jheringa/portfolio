@@ -32,10 +32,7 @@ const IndexPage = () => {
         </div>
         <div className="home-intro">
           <ContactList />
-          <h2 className="h3">
-            I'm Jiska Heringa I like{" "}
-            <span className="highlighted">UX/UI design</span>
-          </h2>
+          <h2 className="h3">I'm Jiska Heringa</h2>
           <p>
             Alright! So I’m a 25-year old based in Rotterdam. I'm a
             Communication multimedia design student With a great passion for

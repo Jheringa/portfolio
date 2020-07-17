@@ -22,7 +22,7 @@ const CasesPage = () => {
           }
         }
       }
-      caseAd: file(relativePath: { eq: "AD_case_index.png" }) {
+      caseAd: file(relativePath: { eq: "ad_test.png" }) {
         childImageSharp {
           fluid(maxWidth: 1080) {
             ...GatsbyImageSharpFluid

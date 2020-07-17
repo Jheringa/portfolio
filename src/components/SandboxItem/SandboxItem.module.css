@@ -2,14 +2,14 @@
   display: flex;
   flex-wrap: wrap;
   align-self: flex-start;
-  margin-bottom: var(--space-large);
+  margin-top: var(--space-large);
 }
 
 .sandboxImage {
   flex-basis: 100%;
   position: relative;
   width: 100%;
-  margin-bottom: var(--space-mediun);
+  margin-top: var(--space-mediun);
 
   @media (min-width: 768px) {
     flex-basis: 60%;
@@ -43,10 +43,11 @@
 
   @media (min-width: 768px) {
     padding-left: var(--space-mediun);
+    margin-top: var(--space-mediun);
     flex-basis: 40%;
   }
 
   & p {
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
   }
 }
