@@ -40,7 +40,7 @@
 
 .sandboxText {
   flex-basis: 100%;
-
+  margin-top: 1rem;
   @media (min-width: 768px) {
     padding-left: var(--space-mediun);
     margin-top: var(--space-mediun);
@@ -55,7 +55,6 @@
   flex-basis: 100%%;
 
   @media (min-width: 768px) {
-    /* padding-left: var(--space-mediun); */
     margin-top: var(--space-mediun);
     flex-basis: 60%;
   }
