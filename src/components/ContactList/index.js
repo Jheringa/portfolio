@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './styles/ContactList.module.css'
-import pdf from '../../static/Jiska-heringa-cv-2019.pdf';
+import pdf from '../../static/Jiska-heringa-cv-2021.pdf';
 
 const ContactList = () => (
   <ul className={styles.list}>

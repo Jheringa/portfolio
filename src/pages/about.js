@@ -33,23 +33,18 @@ const IndexPage = () => {
         <div className="home-intro">
           <ContactList />
           <h2 className="h3">I'm Jiska Heringa</h2>
+          <h4>  <span className="highlighted">UX/UI designer</span></h4>
+           
           <p>
-            Alright! So I’m a 25-year old based in Rotterdam. I'm a
-            Communication multimedia design student With a great passion for
-            experimenting and working on physical products and installations.
-            With my coding background (graduated in Interactive design at
-            Grafisch Lyceum Rotterdam, 2016), I like to challenge myself to
-            tryout techniques such as AR/VR. In september I'm starting the minor
-            Smart material for behaviour change. For my graduation project I
-            would like to discover more new technology and use them in projects.
-            Topics that I would like to work with sound and light combining with
-            topics like future living, sustainability, food or music. With the
-            goal to inspire, entertain, and educate the user.
+          Alright! So I’m a 25-year old based in Rotterdam, The Netherlands. 
+
+<p>With my coding background (graduated in Interactive design at Grafisch Lyceum Rotterdam, 2016). I’m soon to be graduated as a Communication multimedia designer. I'm looking for a new challenge starting begin July. </p>
+<p>As a designer I think it is important to be up to date with the designtrends and search for new technology to experiment with to implement in projects. Not only do I like to design for apps and websites, through the years I also developed an intrest for experimenting and working on physical products and installations. </p>
+
+
           </p>
           <p>
-            In In my spare time I try to do small experiments with musical
-            instruments or food dishes. Or I might be found on the beach
-            catching waves (:
+          In my spare time I practise music, playing the guitar and piano. Explore the outdoors, going for hikes, surfing, or snowboarding. I’m always on the lookout for new challenges that will broaden my horizon.
           </p>
         </div>
       </header>

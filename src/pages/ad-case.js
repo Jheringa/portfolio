@@ -66,6 +66,7 @@ const AdCase = () => {
             </h2>
             <Parallax y={[-15, 10]} tagOuter="figure">
               <p>
+                The case was assigned by AD (a Dutch daily newspaper).
                 To find out the reason for millennials not being involved with
                 daily news we needed to take a look at their habits and needs.
                 We had a survey among millennials and found the following
@@ -74,6 +75,7 @@ const AdCase = () => {
             </Parallax>
             <div className="results">
               <div className="split-wrapper centered">
+                <br></br>
                 <h3 className="h3__case">Values and goals</h3>
 
                 <ul className="result-list">
@@ -107,8 +109,8 @@ const AdCase = () => {
               newspaper experience. The concept we created is for all ages and
               does not limit to just the target group.
             </p>
-
-            <div className="split-wrapper">
+            
+            {/* <div className="split-wrapper"> */}
               <p>
                 We wanted to give the user short insights about the news, from a
                 different perspective. By doing this we want to stimulate them
@@ -123,7 +125,31 @@ const AdCase = () => {
                 is to make this possible within the existing AD app so there is
                 no extra account or app needed.
               </p>
+            {/* </div> */}
+            <div className="results">
+              <div className="split-wrapper centered">
+                <br></br>
+                <p>
+                <h3 className="h3__case">A few advantages of the concept</h3>
+
+                <ul className="result-list">
+                  <li>
+                  <b>Determine your "personalization" yourself.</b>
+ <p>Wherever you go where articles from the AD can be found, such as on digital signs on the road or the paper newspaper itself, 
+   you can scan with your camera of your device. In this way, the target group itself determines what they read instead of AD.{" "}</p>
+                  </li>
+                  <li>
+                  <b>Wide range. </b>
+                   <p>You do not only hit up with the target group 15-25 y/o but also the older target groups and even younger target groups because it can be used everywhere.</p>
+                  </li>
+                  <li>
+                  <b>Experience more, read less. </b>
+                  <p>The target group does not like to read long pieces of text, by consuming the news in a way will not only get the insides of the topic but also they might see content that at first glance might not have interested them.</p>
+                  </li>
+                </ul></p>
+              </div>
             </div>
+            
           </section>
           <section className="case-section">
             <Parallax y={[-20, 20]} tagOuter="figure">
@@ -138,11 +164,12 @@ const AdCase = () => {
               Design
             </h2>
             <p>
-              For the design it was my task to work on the AR element. For this
+            My role in the project was as a prototyper. At first the app Layar was used, a free usable program with wich you can set markers that can show an overlay.
+              For the final prototype. There were some limitations by using the program and we didn't want to be depending on a third-party program. It was my task to find a way to work AR with software. For this
               I used Unity, a platform where you can create AR overlays. There
               were different prototypes where we showed different types of
-              content to see what kinda insight information the used would like
-              to see. For the public transport board we could not make an AR
+              content to see what kinda insight information the user would like
+              to see. For the public transport board, we could not make an AR
               version but we tested it with a demo video and scenario.
             </p>
             <div className="split-wrapper">

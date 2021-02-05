@@ -132,8 +132,8 @@ const PaardPage = () => {
             <h2 className="xl-title with-overlapping-text" data-count="2">
               Concept
             </h2>
-            <div className="split-wrapper">
-              <div className="split-wrapper__column">
+            {/* <div className="split-wrapper"> */}
+              {/* <div className="split-wrapper__column"> */}
                 <p>
                   This app is for indecisive people. The struggle of not knowing
                   what to eat at night is a common problem for students / people
@@ -145,21 +145,23 @@ const PaardPage = () => {
                   recipes I added a gamification element, to unlock next level
                   recipes.
                 </p>
-              </div>
+              {/* </div> */}
 
-              <div className="split-wrapper__column">
+              {/* <div className="split-wrapper__column"> */}
                 <h3 className="h3__case">Final concept</h3>
                 <p>
-                  This app will help you decide on what to eat. By going trough
-                  a couple simple questions it generates a suited recipe. After
-                  discovering all the recipes you unlock a special recipe for
+                  This app will help you decide on what to eat. By going through
+                  a couple of simple questions it generates a suited recipe. Because gamification is a good stimulance for a user to keep using an app I added
+                  an option to unlock a special recipe and an archive in where you can see which recipes are already unlocked and used. This will also stimulate the user to try out different types of food.
+                
+                  After discovering all the recipes you unlock a special recipe for
                   each of the base categories (pasta, rice, etc). These special
-                  recipes will challenge you to try new things. They may be a
+                  recipes will challenge you to try new more challenging recipes. They might be a
                   little harder to make but will be a good way to impress your
                   friends.
                 </p>
-              </div>
-            </div>
+              {/* </div> */}
+            {/* </div> */}
 
             <Parallax y={[-20, 20]} tagOuter="figure">
               <span className="subtitle">
